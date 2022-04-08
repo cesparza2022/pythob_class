@@ -18,4 +18,6 @@ arch.close()
 
 
 ##Calcular e imprimir los porcentajes 
-print(f'Porcentaje de GC y AT\n  AT:{((arreglo.count("A") + arreglo.count("T"))/len(arreglo))*100 }% GC:{((arreglo.count("G") + arreglo.count("C"))/len(arreglo))*100 }%')
+print(f'Porcentaje de GC y AT\n  \
+AT:{((arreglo.count("A") + arreglo.count("T"))/len(arreglo))*100 }% \
+GC:{((arreglo.count("G") + arreglo.count("C"))/len(arreglo))*100 }%')
