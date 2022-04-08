@@ -13,7 +13,7 @@ DESCRIPTION
 '''
 
 ##Obtener el archivo desde la ruta y sacar el contenido
-arch = open("data/dna.txt","r")
+arch = open("data/dna.txt","r") # El archivo no existe
 contenido = arch.read()
 arch.close()
 
@@ -22,7 +22,7 @@ arch.close()
 id = input("ID de la secuencia ")
 
 ## Se genera el fasta 
-arch_fasta = open("resultados/arreglo.fasta", "w")
+arch_fasta = open("resultados/arreglo.fasta", "w") # La ruta no existe
 arch_fasta.write(f">{id} \n{contenido}")
 arch_fasta.close()
 
