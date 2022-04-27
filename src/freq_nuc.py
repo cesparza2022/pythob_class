@@ -26,8 +26,6 @@ else:
   arch.close()
 
 
-
-
 ##Imprimir la fecuencia de cada nucleotido
 print(f'Freceuncia de nucleotidos\n" {str(arreglo)}\n A: {arreglo.count("A")} C: {arreglo.count("C")} T: {arreglo.count("T")} G: {arreglo.count("G")}')
 
