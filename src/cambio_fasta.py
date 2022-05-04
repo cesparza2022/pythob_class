@@ -3,7 +3,7 @@ NAME
     cambio_fasta
     
 VERSION
-    1.1
+    1.2
     
 AUTHOR 
     César Esparza
@@ -36,7 +36,7 @@ else:
   id = input("ID de la secuencia ")
 
   ## Se genera el nuevo archivo fasta
-  fasta= open("results/arreglo.fasta","w")
+  fasta= open("resultados/arreglo.fasta","w")
   fasta.write(f">{id}\n")
   fasta.write(arch)
   fasta.close()
