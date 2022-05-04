@@ -6,6 +6,9 @@ Version
     
 Author 
     Cesar Esparza
+
+Github
+  https://github.com/cesparza2022/pythob_class
     
 Description
     Es un script para que un usuario pueda jugar piedra, papel o tijera con la computadora. 

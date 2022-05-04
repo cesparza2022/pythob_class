@@ -1,29 +1,42 @@
-'''
+''' 
 NAME
     cambio_fasta
+    
 VERSION
-    1.0
-AUTHOR
-  César Esparza
+    1.1
+    
+AUTHOR 
+    César Esparza
+
 GITHUB
   https://github.com/cesparza2022/pythob_class
+    
 DESCRIPTION
-  El codigo sirve para generar un archivo de DNA tipo FASTA a partir de uno raw
+    Programa que genera un archivo fasta apartir de un archivo que contiene una secuencia de ADN.
+    
+CATEGORY
+	  Genomic Sequence
 
+ARGUMENTS
+    none
+    
 '''
+ruta = input("ingrese la ruta del archivo: ")
 
-##Obtener el archivo desde la ruta y sacar el contenido
-arch = open("data/dna.txt","r")
-contenido = arch.read()
-arch.close()
+try:
+    with open( ruta,'r') as dna:
+        arch= dna.read()
+        
+except IOError as io_error: 
+    print(f"No se encuentra el archivo {io_error} \n")
 
 
-## Se solicita el identificador de la secuencia 
-id = input("ID de la secuencia ")
+else:
+  ## Se solicita el identificador de la secuencia 
+  id = input("ID de la secuencia ")
 
-## Se genera el fasta 
-arch_fasta = open("resultados/arreglo.fasta", "w")
-arch_fasta.write(f">{id} \n{contenido}")
-arch_fasta.close()
-
-print("ya se guardo el archivo fasta en la carpeta de resultados")
+  ## Se genera el nuevo archivo fasta
+  fasta= open("results/arreglo.fasta","w")
+  fasta.write(f">{id}\n")
+  fasta.write(arch)
+  fasta.close()
