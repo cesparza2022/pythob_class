@@ -9,7 +9,7 @@ Repositorio para la clase *Introducción a Python*. En este repositorio se van a
 Scripts de los programas para la clase
 - ### **docs** 
 Documentación, notas en clase y archivos (.txt, .md)
-- ### **data** 
+- ### **datos** 
 Archivos necesarios para ciertos scripts
 - ### **README** 
 Descripción del repositorio
