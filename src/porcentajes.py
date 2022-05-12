@@ -2,7 +2,7 @@
     porcentajes
 
 VERSION
-    1.2
+    1.3
 
 AUTHOR
     César Esparza
@@ -46,7 +46,7 @@ try:
   ## Se abre el archivo para leer
   with open(ruta, 'r') as dna:
         arreglo= ruta.read().rstrip("\n").upper()
-	size = len(file_content)
+	size = len(arreglo)
         
 except IOError as io_error: 
     print(f"No se encuentra el archivo {io_error} \n")
