@@ -80,13 +80,3 @@ def return_seq(file_path):
   
   return secuencia
   
-  #Remueve los adaptadores 
-def seq_trimming(file_path, new_path="data/trimmed_seq.txt"):
-  with open( file_path,'r') as dna:
-        lineas = dna.readlines()
-  with open(new_path, 'w') as adapter_free:
-        ## Eliminar los adaptadores.
-        ## Pasar la secuencia limpia a otro archivo
-        for seq in lineas:
-            seq_limpia = seq[14:]
-            adapter_free.write(seq_limpia)
