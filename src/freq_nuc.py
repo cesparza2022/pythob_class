@@ -3,7 +3,7 @@ NAME
     freq_nuc
 
 VERSION
-    1.1
+    2.0
 
 AUTHOR
   César Esparza
@@ -20,11 +20,14 @@ ARGUMENTS
     none
 
 '''
+## Importar funcion 
+from DNA_module import frequency
+
 ##Solicitar al usuario que ingrese el arreglo 
 arreglo = input("ingrese el arreglo: ")
 
 
 ##Imprimir la fecuencia de cada nucleotido
-print(f'Freceuncia de nucleotidos\n" {str(arreglo)}\n A: {arreglo.count("A")} C: {arreglo.count("C")} T: {arreglo.count("T")} G: {arreglo.count("G")}')
+print(frequency(arreglo))
 
 
