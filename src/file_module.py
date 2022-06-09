@@ -18,7 +18,7 @@ CATEGORY
 '''
 
  #Remueve los adaptadores 
-def seq_trimming(file_path, new_path="data/trimmed_seq.txt"):
+def seq_trimming(file_path, new_path="results/trimmed_seq.txt"):
   with open( file_path,'r') as dna:
         lineas = dna.readlines()
   with open(new_path, 'w') as adapter_free:
