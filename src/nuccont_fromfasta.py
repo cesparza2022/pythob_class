@@ -25,7 +25,7 @@ See also
     None
     '''
  
-from Tool_kit import purine_pyrimidine, return_seq
+from Tool_kit import purine_pyrimidine, read
 
 import argparse
 
@@ -53,7 +53,7 @@ file_path = args.input
 fasta_orden = {}
 
 ##Guardar la informacion como una lista
-fasta = return_seq(file_path)
+fasta = read(file_path)
 
 ##El string que va a contener el encabezado
 fasta_encabezado = ""
