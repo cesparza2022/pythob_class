@@ -2,7 +2,7 @@
 NAME
     DNA_module
 VERSION
-    1.1
+    1.6
 AUTHOR
     César Esparza
 GITHUB
