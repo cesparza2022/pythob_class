@@ -1,4 +1,4 @@
-DNA_Codons = {
+codons = {
     "GCT": "A", "GCC": "A", "GCA": "A", "GCG": "A",
     "GAT": "D", "GAC": "D",
     "GAA": "E", "GAG": "E",
