@@ -77,6 +77,15 @@ def purine_pyrimidine(seq, dec=0):
 def return_seq(file_path):
   with open(file_path, 'r') as archivo:
     return [l.strip() for l in archivo.readlines()]
+
+def translate(seq):
+  pos_i =0
+  prot = []
+  for pos in range(pos_i, len(seq) -2, 3): 
+    codon = codons[seq[pos:pos+3]]
+    prot.append(codon)
+
+  return prot
   
 
   
