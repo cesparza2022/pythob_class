@@ -54,7 +54,7 @@ def reverse_complement(seq):
   return"".join( reverse_nucleotides[nuc] for nuc in seq)
 
   #Regresa el porcentaje de 
-def purine_pirimidine(seq, dec=0):
+def purine_pyrimidine(seq, dec=0):
   
   a_num = seq.count('A') 
   t_num= seq.count('T')
@@ -75,8 +75,8 @@ def purine_pirimidine(seq, dec=0):
 
   #Asigna a una variable el contenido del archivo 
 def return_seq(file_path):
-  with open(file_path) as archivo:
-    secuencia = archivo.read()
+  with open(file_path, 'r') as archivo:
+    return [l.strip() for l in archivo.readlines()]
   
-  return secuencia
+
   
