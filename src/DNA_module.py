@@ -79,8 +79,7 @@ def return_seq(file_path):
     return [l.strip() for l in archivo.readlines()]
    
     #Regresa la traduccion de la secuencia
-def translate(seq):
-  pos_i =0
+def translate(seq, pos_i =0):
   prot = []
   for pos in range(pos_i, len(seq) -2, 3): 
     codon = codons[seq[pos:pos+3]]
