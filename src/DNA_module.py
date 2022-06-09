@@ -73,11 +73,12 @@ def purine_pyrimidine(seq, dec=0):
 
   return at_content,cg_content
 
-  #Asigna a una variable el contenido del archivo 
+  #Regresa la lectura dell archivo 
 def return_seq(file_path):
   with open(file_path, 'r') as archivo:
     return [l.strip() for l in archivo.readlines()]
-
+   
+    #Regresa la traduccion de la secuencia
 def translate(seq):
   pos_i =0
   prot = []
