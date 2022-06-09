@@ -21,3 +21,30 @@ codons = {
     "TAT": "Y", "TAC": "Y",
     "TAA": "stop", "TAG": "stop", "TGA": "stop"
 }
+
+aas ={'A': ('A', 'ALA', 'alanine'),
+              'R': ('R', 'ARG', 'arginine'),
+              'N': ('N', 'ASN', 'asparagine'),
+              'D': ('D', 'ASP', 'aspartic acid'),
+              'C': ('C', 'CYS', 'cysteine'),
+              'Q': ('Q', 'GLN', 'glutamine'),
+              'E': ('E', 'GLU', 'glutamic acid'),
+              'G': ('G', 'GLY', 'glycine'),
+              'H': ('H', 'HIS', 'histidine'),
+              'I': ('I', 'ILE', 'isoleucine'),
+              'L': ('L', 'LEU', 'leucine'),
+              'K': ('K', 'LYS', 'lysine'),
+              'M': ('M', 'MET', 'methionine'),
+              'F': ('F', 'PHE', 'phenylalanine'),
+              'P': ('P', 'PRO', 'proline'),
+              'S': ('S', 'SER', 'serine'),
+              'T': ('T', 'THR', 'threonine'),
+              'W': ('W', 'TRP', 'tryptophan'),
+              'Y': ('Y', 'TYR', 'tyrosine'),
+              'V': ('V', 'VAL', 'valine'),
+              'X': ('X', 'GLX', 'glutaminx'),
+              'Z': ('Z', 'GLI', 'glycine'),
+              'J': ('J', 'NLE', 'norleucine'),
+	           'U': ('U', 'CYC', 'cysteinc')
+     }
+             
