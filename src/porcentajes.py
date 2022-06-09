@@ -2,7 +2,7 @@
     porcentajes
 
 VERSION
-    1.4
+    2
 
 AUTHOR
     César Esparza
@@ -20,8 +20,9 @@ ARGUMENTS
     none
 
 '''
-# Importar la libreria argparse
+# Importar
 import argparse
+from DNA_module import validate, purine_pyrimidine
 
 ## Definir los argumentos opcionales y posicionales 
 arg_parse = argparse.ArgumentParser( description="Calcula los porcentajes de AT y GC")
@@ -48,8 +49,8 @@ try:
 
   ## Se abre el archivo para leer, se eliminan los saltos de linea y se pone todo en mayusculas
   with open(ruta, 'r') as dna:
-        arreglo= ruta.read().rstrip("\n").upper()
-	size = len(arreglo)
+        arreglo= ruta.read().rstrip("\n")
+	arreglo = validate(arreglo)
 	
 ## Marca Error si no se encuentra el archivo       
 except IOError as io_error: 
@@ -57,25 +58,23 @@ except IOError as io_error:
   
 else:
     ## Se saca el porcentaje de la secuencia y se guarda en variables
-    AT = ((arreglo.count('A') + arreglo.count('T')) / size) * 100
-    GC = ((arreglo.count('G') + arreglo.count('C')) / size) * 100
+    cont = purine_pyrimidine(arreglo)
 
     ## Se redondea si el numero de decimales es asignado
     if args.round:
-        AT = round(AT, args.round)
-        GC = round(GC, args.round)
+      cont =  purine_pyrimidine(arreglo,args.round)
    
     ## Se abre el archivo con los resultados 
     if args.output:	
 	file = open(args.output, "w")
-   		file.write(f"La secuencia {arreglo}\n Tiene un porcentaje de {AT}% de AT y {GC}% de GC" )
+   		file.write(f"La secuencia {arreglo}\n Tiene un porcentajes de {cont} )
 		print(f"\nSe genero el archivo {args.output} con los resultados")
 		file.close()  
     
     else:
 		
      ## Imprimir los porcentajes obtenidos 
-	print(f"Los porcentajes son:\n  AT:{AT}% y GC:{GC}%" 
+	print(f"Los porcentajes son:\n {cont}" 
                     
 
     
