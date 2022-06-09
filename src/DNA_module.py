@@ -2,7 +2,7 @@
 NAME
     DNA_module
 VERSION
-    1.6
+    1.8
 AUTHOR
     César Esparza
 GITHUB
@@ -17,7 +17,9 @@ CATEGORY
     frequency
     transcription
     reverse_complement
-    purine_pirimidine
+    purine_pyrimidine
+    read
+    translate
     
 
 
@@ -74,7 +76,7 @@ def purine_pyrimidine(seq, dec=0):
   return at_content,cg_content
 
   #Regresa la lectura dell archivo 
-def return_seq(file_path):
+def read(file_path):
   with open(file_path, 'r') as archivo:
     return [l.strip() for l in archivo.readlines()]
    
