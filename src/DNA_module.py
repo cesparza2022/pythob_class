@@ -2,7 +2,7 @@
 NAME
     DNA_module
 VERSION
-    1.8
+    2.1
 AUTHOR
     César Esparza
 GITHUB
@@ -22,10 +22,10 @@ CATEGORY
     translate
     
 
-
 '''
 from structures import nulceotides, reverse_nucleotides
-  
+ 
+    
 def validate(dna_seq):
     '''
     Pasa a mayúsculas y revisar que sean valores validos 
@@ -65,9 +65,10 @@ def transcription(seq):
         Parameters:
             seq (str): secuencia de DNA a procesar
         Returns:
-            seq (str): secuancia de RNA
+            (str): secuancia de RNA
     '''  
   return seq.replace("T","U")
+
 
 def reverse_complement(seq):
           '''
@@ -75,7 +76,7 @@ def reverse_complement(seq):
         Parameters:
             seq (str): secuencia de DNA a procesar
         Returns:
-            seq (seq): secuencia de DNA complentaria a la ingresada
+            (seq): secuencia de DNA complentaria a la ingresada
     '''  
   return"".join( reverse_nucleotides[nuc] for nuc in seq)
 
@@ -119,7 +120,7 @@ def read(file_path):
   with open(file_path, 'r') as archivo:
     return [l.strip() for l in archivo.readlines()]
    
-    #Regresa la traduccion de la secuencia
+    
 def translate(seq, pos_i =0):
           '''
     Regresa la traduccion de la secuencia de DNA
@@ -127,7 +128,7 @@ def translate(seq, pos_i =0):
             seq (str): secuencia de DNA a procesar
             pos_i (int): nuc de inicio para cambia marco de lectura
         Returns:
-            prot (dicc): secuencia peptídica
+            prot (list): secuencia peptídica
     '''  
   prot = []
   for pos in range(pos_i, len(seq) -2, 3): 
