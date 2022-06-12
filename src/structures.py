@@ -22,7 +22,7 @@ codons = {
     "TAA": "stop", "TAG": "stop", "TGA": "stop"
 }
 
-aas ={'A': ('A', 'ALA', 'alanine'),
+aminos ={'A': ('A', 'ALA', 'alanine'),
               'R': ('R', 'ARG', 'arginine'),
               'N': ('N', 'ASN', 'asparagine'),
               'D': ('D', 'ASP', 'aspartic acid'),
@@ -47,4 +47,6 @@ aas ={'A': ('A', 'ALA', 'alanine'),
               'J': ('J', 'NLE', 'norleucine'),
 	           'U': ('U', 'CYC', 'cysteinc')
      }
+nucleotides = ["A", "T","C","G"]
+reverse_nucleotides = {"A":"T", "T":"A","C": "G","G":"C"}
              
