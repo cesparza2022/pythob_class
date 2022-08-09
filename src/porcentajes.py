@@ -5,7 +5,7 @@ VERSION
     2
 
 AUTHOR
-    César Esparza
+    César Fernando Esparza Alvarado
 
 GITHUB
   https://github.com/cesparza2022/pythob_class
