@@ -2,7 +2,7 @@
 NAME
     Bio_tools
 VERSION
-    1.0
+    1.2
 AUTHOR
     César Esparza
 GITHUB
@@ -13,7 +13,8 @@ CATEGORY
     DNA & RNA sequence
  
  Functions
-    validate
+    validate_dna
+    validate_rna
     frequency
     transcription
     reverse_complement
