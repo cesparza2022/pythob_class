@@ -25,7 +25,7 @@ CATEGORY
 from structures import nulceotides, reverse_nucleotides
  
     
-def validate(dna_seq):
+def validate_dna(dna_seq):
     '''
     Pasa a mayúsculas y revisar que sean valores validos 
         Parameters:
@@ -39,6 +39,22 @@ def validate(dna_seq):
       print("Esta mal el arreglo")
       return 
   return tmpseq
+
+   
+def validate_rna(rna_seq):
+    '''
+    Pasa a mayúsculas y revisar que sean valores validos 
+        Parameters:
+            dna_seq (str): secuencia de RNA o DNA a procesar
+        Returns:
+            tmpseq (str): secueancia de RNA validada o error 
+    '''
+  tmpseq = rna_seq.upper()
+  for nuc in tmpseq:
+    if nuc not in nucleotides:
+      print("Esta mal el arreglo")
+  tmpseq = tmpseq.replace("T","U")
+  return(tmpseq)
   
 
 def frequency(seq): 
@@ -131,7 +147,7 @@ def translate(seq, pos_i =0):
     '''  
   prot = []
   for pos in range(pos_i, len(seq) -2, 3): 
-    codon = codons[seq[pos:pos+3]]
+    codon = gencode[seq[pos:pos+3]]
     prot.append(codon)
 
   return prot
