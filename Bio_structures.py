@@ -1,0 +1,52 @@
+codons = {
+    "GCT": "A", "GCC": "A", "GCA": "A", "GCG": "A",
+    "GAT": "D", "GAC": "D",
+    "GAA": "E", "GAG": "E",
+    "TTT": "F", "TTC": "F",
+    "TGT": "C", "TGC": "C",
+    "GGT": "G", "GGC": "G", "GGA": "G", "GGG": "G",
+    "CAT": "H", "CAC": "H",
+    "CGT": "R", "CGC": "R", "CGA": "R", "CGG": "R", "AGA": "R", "AGG": "R",
+    "TCT": "S", "TCC": "S", "TCA": "S", "TCG": "S", "AGT": "S", "AGC": "S",
+    "ACT": "T", "ACC": "T", "ACA": "T", "ACG": "T",
+    "GTT": "V", "GTC": "V", "GTA": "V", "GTG": "V",   
+    "ATA": "I", "ATT": "I", "ATC": "I",
+    "AAA": "K", "AAG": "K",
+    "TTA": "L", "TTG": "L", "CTT": "L", "CTC": "L", "CTA": "L", "CTG": "L",
+    "ATG": "M",
+    "AAT": "N", "AAC": "N",
+    "CCT": "P", "CCC": "P", "CCA": "P", "CCG": "P",
+    "CAA": "Q", "CAG": "Q",
+    "TGG": "W",
+    "TAT": "Y", "TAC": "Y",
+    "TAA": "stop", "TAG": "stop", "TGA": "stop"
+}
+
+aminos ={'A': ('A', 'ALA', 'alanine'),
+              'R': ('R', 'ARG', 'arginine'),
+              'N': ('N', 'ASN', 'asparagine'),
+              'D': ('D', 'ASP', 'aspartic acid'),
+              'C': ('C', 'CYS', 'cysteine'),
+              'Q': ('Q', 'GLN', 'glutamine'),
+              'E': ('E', 'GLU', 'glutamic acid'),
+              'G': ('G', 'GLY', 'glycine'),
+              'H': ('H', 'HIS', 'histidine'),
+              'I': ('I', 'ILE', 'isoleucine'),
+              'L': ('L', 'LEU', 'leucine'),
+              'K': ('K', 'LYS', 'lysine'),
+              'M': ('M', 'MET', 'methionine'),
+              'F': ('F', 'PHE', 'phenylalanine'),
+              'P': ('P', 'PRO', 'proline'),
+              'S': ('S', 'SER', 'serine'),
+              'T': ('T', 'THR', 'threonine'),
+              'W': ('W', 'TRP', 'tryptophan'),
+              'Y': ('Y', 'TYR', 'tyrosine'),
+              'V': ('V', 'VAL', 'valine'),
+              'X': ('X', 'GLX', 'glutaminx'),
+              'Z': ('Z', 'GLI', 'glycine'),
+              'J': ('J', 'NLE', 'norleucine'),
+	           'U': ('U', 'CYC', 'cysteinc')
+     }
+nucleotides = ["A", "T","C","G"]
+reverse_nucleotides = {"A":"T", "T":"A","C": "G","G":"C"}
+             
