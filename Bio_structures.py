@@ -9,7 +9,7 @@ codons = {
     "CGT": "R", "CGC": "R", "CGA": "R", "CGG": "R", "AGA": "R", "AGG": "R",
     "TCT": "S", "TCC": "S", "TCA": "S", "TCG": "S", "AGT": "S", "AGC": "S",
     "ACT": "T", "ACC": "T", "ACA": "T", "ACG": "T",
-    "GTT": "V", "GTC": "V", "GTA": "V", "GTG": "V",   
+    "GTT": "V", "GTC": "V", "GTA": "V", "GTG": "V",
     "ATA": "I", "ATT": "I", "ATC": "I",
     "AAA": "K", "AAG": "K",
     "TTA": "L", "TTG": "L", "CTT": "L", "CTC": "L", "CTA": "L", "CTG": "L",
@@ -47,6 +47,21 @@ aminos ={'A': ('A', 'ALA', 'alanine'),
               'J': ('J', 'NLE', 'norleucine'),
 	           'U': ('U', 'CYC', 'cysteinc')
      }
-nucleotides = ["A", "T","C","G"]
+nucleotides = ["A", "T","C","G","U"]
 reverse_nucleotides = {"A":"T", "T":"A","C": "G","G":"C"}
+gencode = {
+    'AUA':'I', 'AUC':'I', 'AUU':'I', 'AUG':'M', 'ACA':'T',
+    'ACC':'T', 'ACG':'T', 'ACU':'T', 'AAC':'N', 'AAU':'N',
+    'AAA':'K', 'AAG':'K', 'AGC':'S', 'AGU':'S', 'AGA':'R',
+    'AGG':'R', 'CUA':'L', 'CUC':'L', 'CUG':'L', 'CUU':'L',
+    'CCA':'P', 'CCC':'P', 'CCG':'P', 'CCU':'P', 'CAC':'H',
+    'CAU':'H', 'CAA':'Q', 'CAG':'Q', 'CGA':'R', 'CGC':'R',
+    'CGG':'R', 'CGU':'R', 'GUA':'V', 'GUC':'V', 'GUG':'V',
+    'GUU':'V', 'GCA':'A', 'GCC':'A', 'GCG':'A', 'GCU':'A',
+    'GAC':'D', 'GAU':'D', 'GAA':'E', 'GAG':'E', 'GGA':'G',
+    'GGC':'G', 'GGG':'G', 'GGU':'G', 'UCA':'S', 'UCC':'S',
+    'UCG':'S', 'UCU':'S', 'UUC':'F', 'UUU':'F', 'UUA':'L',
+    'UUG':'L', 'UAC':'Y', 'UAU':'Y', 'UAA':'_', 'UAG':'_',
+    'UGC':'C', 'UGU':'C', 'UGA':'_', 'UGG':'W'}
+
              
