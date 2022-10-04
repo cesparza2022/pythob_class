@@ -2,7 +2,7 @@
 NAME
     DNA_module
 VERSION
-    2.1
+    2.3
 AUTHOR
     César Esparza
 GITHUB
@@ -24,7 +24,7 @@ CATEGORY
 
 '''
 from structures import nulceotides, reverse_nucleotides
- 
+from Bio import SeqUtils
     
 def validate(dna_seq):
     '''
