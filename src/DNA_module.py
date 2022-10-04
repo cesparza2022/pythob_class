@@ -136,6 +136,29 @@ def translate(seq, pos_i =0):
     prot.append(codon)
 
   return prot
+
+def longest_peptide(seq):
+    
+      '''
+    Regresa el peptido mas largo encontrado en la 
+        secuncia dada:
+            seq (str): secuencia de DNA a procesar
+        Returns:
+            long_peptide (str): la secuencia que resulta en 
+                el peptido mas largo
+    '''
+    rev_seq = reverse_complement(seq)
+    
+    orfs = SeqUtils.nt_search(str(seq), 'ATG')   
+    rev_orfs = SeqUtils.nt_search(str(rev_seq), 'ATG')
+    
+    peptids = [seq[nuc:].translate(to_stop = True) for nuc in orfs[1:]]
+    peptids.append([rev_seq[nuc:].translate(to_stop = True) for nuc in rev_orfs[1:]])
+    
+    return max(peptids)
+    
+    
+    
   
 
   
