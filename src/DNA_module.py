@@ -118,6 +118,7 @@ def read(file_path):
              (list): lectura por linea del archivo 
     '''  
   with open(file_path, 'r') as archivo:
+    archivo = archivo.read().replace('\n','')
     return [l.strip() for l in archivo.readlines()]
    
     
