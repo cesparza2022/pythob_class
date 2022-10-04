@@ -109,7 +109,7 @@ def purine_pyrimidine(seq, dec=0):
   return at_content,cg_content
 
   
-def read(file_path):
+def seq_read(file_path):
           '''
     Se encarga de la lectura del archivo 
         Parameters:
