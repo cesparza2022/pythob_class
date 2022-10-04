@@ -3,7 +3,7 @@ Name
     longest_peptide
     
 Version
-    0.1
+    1.1
     
 Author 
     César Esparza
