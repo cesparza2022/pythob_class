@@ -153,10 +153,10 @@ def longest_peptide(seq):
     orfs = SeqUtils.nt_search(str(seq), 'ATG')   
     rev_orfs = SeqUtils.nt_search(str(rev_seq), 'ATG')
     
-    peptids = [seq[nuc:].translate(to_stop = True) for nuc in orfs[1:]]
-    peptids.append([rev_seq[nuc:].translate(to_stop = True) for nuc in rev_orfs[1:]])
+    peptides = [seq[nuc:].translate(to_stop = True) for nuc in orfs[1:]]
+    peptides.append([rev_seq[nuc:].translate(to_stop = True) for nuc in rev_orfs[1:]])
     
-    return max(peptids)
+    return max(peptides)
     
     
     
