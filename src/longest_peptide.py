@@ -3,7 +3,7 @@ Name
     longest_peptide
     
 Version
-    1.1
+    1.2
     
 Author 
     César Esparza
@@ -22,7 +22,7 @@ See also
     None
 '''
 
-from DNA_module import tranaslate, validate, seq_read
+from DNA_module import longest_peptide, validate, seq_read
 from Bio import SeqUtils
 import argparse
 
