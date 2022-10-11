@@ -2,7 +2,7 @@
 NAME
     Bio_tools
 VERSION
-    1.4
+    1.5
 AUTHOR
     César Esparza
 GITHUB
@@ -18,6 +18,8 @@ CATEGORY
     frequency
     transcription
     max_pattern
+    index_list
+    show_novalid
     reverse_complement
     purine_pyrimidine
     read
@@ -119,8 +121,36 @@ def max_pattern(seq, pattern, min_size=2)
     print(f"no se encontro el patron un minimo de {min_size} veces ")
     return 
     
+def show_novalid(seq):
+    '''
+    Regresa los indices de los caracteres invalidos de la secuencia 
+        Parameters:
+            seq (str): secuencia de DNA en la que buscar 
+        Returns:
+              (str): el caracter invalido y sus indices
+       ''' 
+    not_nucs = []
+    for nuc in seq:
+      if nuc not in nucleotides:
+        not_nucs.append(nuc) 
+    for not_nuc in not_nucs:
+      while not_nucs.count(not_nuc) > 1:
+        not_nucs.remove(not_nuc)  
+    for not_nuc in not_nucs:
+       print(f"el caracter {not_nuc} se encontro en las posiciones {index_list(not_nuc,seq)}")
+    return 1
     
-    
+
+def index_list(pattern, seq):
+   '''
+    Regresa los indices de un patron en una secuencia dada
+        Parameters:
+            seq (str): secuencia de DNA en la que buscar 
+            pattern (str): patron que buscar en la secuencia
+        Returns:
+              (list): inices en los que se encontro el patron 
+       ''' 
+  return [n for n,item in enumerate(seq) if item==pattern]
 
 def purine_pyrimidine(seq, dec=0):
           '''
