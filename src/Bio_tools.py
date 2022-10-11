@@ -100,7 +100,7 @@ def reverse_complement(seq):
   return"".join( reverse_nucleotides[nuc] for nuc in seq)
 
 def max_pattern(seq, pattern, min_size=2)
- '''
+        '''
     Regresa el numero de maximo de repeticiones consecutivasa
         de un patron a lo largo de la cadena 
         Parameters:
@@ -109,7 +109,7 @@ def max_pattern(seq, pattern, min_size=2)
             size_min (int): numero minimo de repeticiones del patron 
         Returns:
             (int): mayor numero e repeticiones consecutivas encontradas
-       '''  
+    '''  
   temp_list=[]
   result = re.finditer(pattern,seq)
   for pat in result:
@@ -121,7 +121,7 @@ def max_pattern(seq, pattern, min_size=2)
     print(f"no se encontro el patron un minimo de {min_size} veces ")
     return 
     
-def show_novalid(seq):
+ def show_novalid(seq):
     '''
     Regresa los indices de los caracteres invalidos de la secuencia 
         Parameters:
@@ -151,6 +151,7 @@ def index_list(pattern, seq):
               (list): inices en los que se encontro el patron 
        ''' 
   return [n for n,item in enumerate(seq) if item==pattern]
+
 
 def purine_pyrimidine(seq, dec=0):
           '''
