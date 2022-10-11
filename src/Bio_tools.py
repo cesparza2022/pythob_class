@@ -2,7 +2,7 @@
 NAME
     Bio_tools
 VERSION
-    1.2
+    1.4
 AUTHOR
     César Esparza
 GITHUB
@@ -17,6 +17,7 @@ CATEGORY
     validate_rna
     frequency
     transcription
+    max_pattern
     reverse_complement
     purine_pyrimidine
     read
@@ -24,7 +25,7 @@ CATEGORY
     
 '''
 from structures import nulceotides, reverse_nucleotides
- 
+import re 
     
 def validate_dna(dna_seq):
     '''
@@ -96,7 +97,31 @@ def reverse_complement(seq):
     '''  
   return"".join( reverse_nucleotides[nuc] for nuc in seq)
 
-  
+def max_pattern(seq, pattern, min_size=2)
+ '''
+    Regresa el numero de maximo de repeticiones consecutivasa
+        de un patron a lo largo de la cadena 
+        Parameters:
+            seq (str): secuencia de DNA en la que buscar
+            pattern (str): patron a buscar
+            size_min (int): numero minimo de repeticiones del patron 
+        Returns:
+            (int): mayor numero e repeticiones consecutivas encontradas
+       '''  
+  temp_list=[]
+  result = re.finditer(pattern,seq)
+  for pat in result:
+    size = pat.end() - pat.start()
+    temp_list.append(size)
+  if max(temp_list) >= min_size:
+    return (max(temp_list))
+  else:
+    print(f"no se encontro el patron un minimo de {min_size} veces ")
+    return 
+    
+    
+    
+
 def purine_pyrimidine(seq, dec=0):
           '''
     Regresa los procentajes de AT y GC 
