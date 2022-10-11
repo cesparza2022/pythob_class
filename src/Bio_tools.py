@@ -116,7 +116,8 @@ def max_pattern(seq, pattern, min_size=2):
      size = pat.end() - pat.start()
      temp_list.append(size)
     if max(temp_list) >= min_size:
-      return (max(temp_list))
+       print(f"el mayor número de repeticiones encontradas del patron fueron {max(temp_list)}") 
+       return (max(temp_list))
     else:
       print(f"no se encontro el patron un minimo de {min_size} veces ")
       return 
