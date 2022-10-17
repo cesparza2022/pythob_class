@@ -24,7 +24,7 @@ CATEGORY
     purine_pyrimidine
     read
     translate
-    fasta_quality
+    fastq_score
     
 '''
 from structures import nulceotides, reverse_nucleotides
@@ -211,7 +211,7 @@ def translate(seq, pos_i =0):
 
   return prot
 
-def fasta_quality(file_path, umbral, output="results/fasta_quality.fasta"):
+def fastq_score(file_path, umbral, output="results/fasta_quality.fasta"):
             '''
     Devuelve las seceuncias que superen el score mínimo 
         Parameters:
@@ -224,11 +224,11 @@ def fasta_quality(file_path, umbral, output="results/fasta_quality.fasta"):
             
     '''
     seqs = 0
-    fasta = open(output, 'w')
+    quality = open(output, 'w')
     for seq in SeqIO.parse(file_path, "fastq"):
         
         if min(seq.letter_annotations['phred_quality']) >= umbral:
-            fasta.write(f"{seq.id}\n{seq.seq}\n")
+            quality.write(f"{seq.id}\n{seq.seq}\n")
             seqs += 1
     print(f"Este fue el totatl de secuencias que superaron el score mínimo \n{seqs}")
     
