@@ -2,7 +2,7 @@
 NAME
     Bio_tools
 VERSION
-    1.7
+    1.8
 AUTHOR
     César Esparza
 GITHUB
@@ -24,6 +24,7 @@ CATEGORY
     purine_pyrimidine
     read
     translate
+    fasta_quality
     
 '''
 from structures import nulceotides, reverse_nucleotides
@@ -209,3 +210,31 @@ def translate(seq, pos_i =0):
     prot.append(codon)
 
   return prot
+
+def fasta_quality(file_path, umbral, output="results/fasta_quality.fasta"):
+            '''
+    Devuelve las seceuncias que superen el score mínimo 
+        Parameters:
+            umbral (int): Valor del umbral deseado. 
+            file_path (str): Dirección al archivo
+            output (str): Archivo de salida con los resultados
+        Returns:
+            output (str): mensaje con el numero de seqs que superaron el umbral
+            fasta (arch): Archivo fasta con los resultados 
+            
+    '''
+    seqs = 0
+    fasta = open(output, 'w')
+    for seq in SeqIO.parse(file_path, "fastq"):
+        
+        if min(seq.letter_annotations['phred_quality']) >= umbral:
+            fasta.write(f"{seq.id}\n{seq.seq}\n")
+            seqs += 1
+    print(f"Este fue el totatl de secuencias que superaron el score mínimo \n{seqs}")
+    
+       
+       
+       
+            
+
+    
