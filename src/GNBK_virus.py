@@ -48,7 +48,7 @@ for record in SeqIO.parse(args.FILE, "genbank"):
   print(f"organismo: {' '.join(record.features[0].qualifiers['organism'])}\n")
   print(f"país: {' '.join(record.features[0].qualifiers['country'])}\n")
   print(f"locación: {record.features[0].location} Tipo: {record.features[0].type}\n")
-  for gen in args.GENES: 
+  for gene in args.GENES: 
      for feature in gb_record.features: 
         if feature.type == args.GENES:
           if features.qualifiers["gene"][0] == gene:
