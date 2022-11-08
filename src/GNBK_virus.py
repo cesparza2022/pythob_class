@@ -52,7 +52,7 @@ for record in SeqIO.parse(args.FILE, "genbank"):
      for feature in gb_record.features: 
         if feature.type == args.GENES:
           if features.qualifiers["gene"][0] == gene:
-            print(f"{args.gene} information: \n")
+            print(f"{args.GENE} information: \n")
             seq = gb.seq[ft.location.nofuzzy_start:ft.location.nofuzzy_end]
             print(f'Secuencia: {seq}\n')
             print(f'Transcripción: {transcription(seq)})
