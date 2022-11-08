@@ -51,9 +51,8 @@ for record in SeqIO.parse(args.FILE, "genbank"):
   for gene in args.GENES: 
      for feature in gb_record.features: 
         if feature.type == args.GENES:
-          if features.qualifiers["gene"][0] == gene:
-            print(f"{args.GENE} information: \n")
-            seq = gb.seq[ft.location.nofuzzy_start:ft.location.nofuzzy_end]
-            print(f'Secuencia: {seq}\n')
-            print(f'Transcripción: {transcription(seq)})
-            print(f'Traducción: {translate(seq)}')
+          print(f"{args.GENE} information: \n")
+          seq = gb.seq[ft.location.nofuzzy_start:ft.location.nofuzzy_end]
+          print(f'Secuencia: {seq}\n')
+          print(f'Transcripción: {transcription(seq)})
+          print(f'Traducción: {translate(seq)}')
