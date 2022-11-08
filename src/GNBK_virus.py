@@ -42,19 +42,18 @@ arg_parser.add_argument("-g","--GENES",
                     
 args= arg_parser.parse_args()
 
-with open(output,"w") as file:
-  for record in SeqIO.parse(args.FILE, "genbank"):
-    print(f"nombre:{record.name}\n")
-    print(f"fecha:{record.annotations['date']}\n")
-    print(f"organismo: {' '.join(record.features[0].qualifiers['organism'])}\n")
-    print(f"país: {' '.join(record.features[0].qualifiers['country'])}\n")
-    print(f"locación: {record.features[0].location} Tipo: {record.features[0].type}\n")
-    for gen in args.GENES: 
-       for feature in gb_record.features: 
-          if feature.type == args.GENES:
-            if features.qualifiers["gene"][0] == gene:
-              print(f"{args.gene} information: \n")
-              seq = gb.seq[ft.location.nofuzzy_start:ft.location.nofuzzy_end]
-              print(f'Secuencia: {seq}\n')
-              print(f'Transcripción: {transcription(seq)})
-              print(f'Traducción: {translate(seq)}')
+for record in SeqIO.parse(args.FILE, "genbank"):
+  print(f"nombre:{record.name}\n")
+  print(f"fecha:{record.annotations['date']}\n")
+  print(f"organismo: {' '.join(record.features[0].qualifiers['organism'])}\n")
+  print(f"país: {' '.join(record.features[0].qualifiers['country'])}\n")
+  print(f"locación: {record.features[0].location} Tipo: {record.features[0].type}\n")
+  for gen in args.GENES: 
+     for feature in gb_record.features: 
+        if feature.type == args.GENES:
+          if features.qualifiers["gene"][0] == gene:
+            print(f"{args.gene} information: \n")
+            seq = gb.seq[ft.location.nofuzzy_start:ft.location.nofuzzy_end]
+            print(f'Secuencia: {seq}\n')
+            print(f'Transcripción: {transcription(seq)})
+            print(f'Traducción: {translate(seq)}')
